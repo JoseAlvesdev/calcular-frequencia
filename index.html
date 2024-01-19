@@ -1,75 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Frequência | Escolar</title>
+    <title>Carcular Frequência | Escolar</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
 </head>
-
 <body>
-        <header id="header">
-            <div id="content-menu">
-                <div id="logo">
-                    <a href="#" class="link"><img src="assets/images/logo-redimen.png" alt="" id="icoLogo"></a>
-                </div>
-                <nav id="navigatie">
-                    <ul id="menu">
-                        <li class="item"><a href="#" class="link">home</a></li>
-                        <li class="item"><a href="#" class="link">sobre</a></li>
-                        <li class="item"><a href="#" class="link">contato</a></li>
-                        <li class="item"><a href="#" class="link">ajuda</a></li>
-                    </ul>
-                </nav>
+    
+    <header id="header">
+        <header class="header">
+            <div id="logo">
+                <a href="#" id="icone"></a>
+                <a href="#" id="texto">Frequência...</a>
             </div>
+
+            <input type="search" name="pesquisa" id="pesquisa" placeholder="O que você procura?">
         </header>
-        <main>
-            <div id="content-main">
-                <h1>Calculadora</h1>
-                <section id="calculadora">
-                    <h2>Calcular Frequência</h2>
-                    <form action="" method="post">
-                        <div class="row">
-                            <!-- <input type="text" id="mes" name="mes" placeholder="Mês do ano"> -->
-                            <select name="mes" id="mes" title="Selecione o mês de referência.">
-                                <option value="selecione">Selecione</option>
-                                <option value="janeiro">Janeiro</option>
-                                <option value="fevereiro">Fevereiro</option>
-                                <option value="marco">Março</option>
-                                <option value="abril">Abril</option>
-                                <option value="maio">Maio</option>
-                                <option value="junho">Junho</option>
-                                <option value="agosto">Agosto</option>
-                                <option value="setembro">Setembro</option>
-                                <option value="outubro">Outubro</option>
-                                <option value="novembro">Novembro</option>
-                                <option value="dezembro">Dezembro</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <input type="number" id="dias-letivos" name="dias-letivos" placeholder="Dias letivos" title="Digite o quantidade de dias letivos, do mês de referência.">
-                        </div>
-                        <div class="row">
-                            <input type="number" id="faltas" name="faltas" placeholder="Faltas" title="Digite a quantidade de faltas que o aluno obteve no mês de referência.">
-                        </div>
-                        <div class="row">
-                            <button type="reset" class="btn btn-secondary">Limpar</button>
-                            <button type="submit" class="btn btn-primary">Calcular</button>
-                        </div>
-                    </form>
-                </section>
-            </div>
-        </main>
-        <footer>
-        
-        </footer>
 
-        <script src="./assets/javaScript/script.js"></script>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">home</a></li>
+                <li><a href="#">serviços</a></li>
+                <li><a href="#">contato</a></li>
+                <li><a href="#">sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+            <h1>Calculadora</h1>
+
+            <section id="calculadora">
+
+                <h2>Calcular Frequência</h2>
+
+                <form action="" method="post">
+                    <div>
+                        <select name="mes" id="mes" title="Selecione o mês de referência." required>
+                            <option value="selecione">Selecione</option>
+                            <option value="janeiro">Janeiro</option>
+                            <option value="fevereiro">Fevereiro</option>
+                            <option value="marco">Março</option>
+                            <option value="abril">Abril</option>
+                            <option value="maio">Maio</option>
+                            <option value="junho">Junho</option>
+                            <option value="agosto">Agosto</option>
+                            <option value="setembro">Setembro</option>
+                            <option value="outubro">Outubro</option>
+                            <option value="novembro">Novembro</option>
+                            <option value="dezembro">Dezembro</option>
+                        </select>
+                        <input type="number" name="diasLetivos" id="diasLetivos" placeholder="Dias" required>
+                        <input type="number" name="faltas" id="faltas" placeholder="Faltas" required>
+                    </div>
+
+                    <div>
+                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="resultado">
+                <h2>Frequência Calculada</h2>
+                <p id="porcentagemFrequencia"></p>
+                <p id="resultMes"></p>
+                <p id="resultDiasLet"></p>
+                <p id="resultFaltas"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 José Henrique. All Rights Reserved.</p>
+    </footer>
+    <script src="./assets/javaScript/script.js" defer></script>
 </body>
-
 </html>

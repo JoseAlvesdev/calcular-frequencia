@@ -1,47 +1,34 @@
-;{
+(function () {
+    "use strict";
 
-const section = document.querySelector('section');
-const form = document.querySelector('form');
-let fragment = document.createDocumentFragment();
-
-form.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const mes = document.querySelector('#mes').value;
-    const diasLetivos = document.querySelector('#dias-letivos').value;
-    const faltas = document.querySelector('#faltas').value;
-
-    const frequencia = (function calcularFrequencia() {
-        return (diasLetivos - faltas) * 100 / diasLetivos;
-    })();
-
-    const elementos = ['section', 'h2', 'p', 'p', 'p'];
-    const novosElementos = [];
+    const form = document.querySelector('form');
+    const resultado = document.querySelector('#resultado');
     
-    elementos.forEach(elemento => {
-        novosElementos.push(document.createElement(elemento));
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const valores = [
+            document.querySelector('#mes').value,
+            document.querySelector('#diasLetivos').value,
+            document.querySelector('#faltas').value
+        ];
+
+        const frequencia = (valores[1] - valores[2]) * 100/valores[1];
+
+        if (event) {
+            resultado.style.display = 'block';
+
+            const porcentagemFrequencia = document.querySelector('#porcentagemFrequencia');
+            porcentagemFrequencia.innerText = `${frequencia.toFixed(1)}%`;
+
+            const resultMes = document.querySelector('#resultMes');
+            resultMes.innerText = `${valores[0].toUpperCase()} de 2024`;
+
+            const resultDiasLet = document.querySelector('#resultDiasLet');
+            resultDiasLet.innerText = `${valores[1]} dias letivos`;
+
+            const resultFaltas = document.querySelector('#resultFaltas');
+            resultFaltas.innerText = resultFaltas.innerText = `${valores[2]} faltas`
+        }
     });
-    
-    novosElementos[1].innerText = 'Frequência Calculada:';
-    novosElementos[1].style.textAlign = 'left'
-    novosElementos[2].innerText = `${frequencia.toFixed(1)}%`;
-    novosElementos[3].innerText = mes;
-    novosElementos[3].style.textTransform = 'capitalize';
-    novosElementos[4].innerText = `Faltas: ${faltas}`;
-
-    let i = 1;
-
-    do {
-        novosElementos[0].appendChild(novosElementos[i]);
-        i++;
-    } while (i < novosElementos.length)
-
-    fragment = novosElementos[0]
-
-    section.after(fragment);
-    
-    
-});
-
-
-};
+})();
