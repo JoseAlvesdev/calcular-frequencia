@@ -50,11 +50,6 @@ input { padding: 10px 20px; border-radius: 4px; }
     color: white;
 }
 
-#header {
-    border-top: 6px solid #085FAB;
-    padding-top: 6px;
-}
-
 .header {
     display: flex;
     align-items: center;
@@ -62,12 +57,12 @@ input { padding: 10px 20px; border-radius: 4px; }
     width: 1280px;
     max-width: 1280px;
     height: 120px;
-    max-height: 120px;
+    max-height: 88px;
     margin: 0 auto;
 }
 
 .header input {
-    width: 300px;
+    width: 200px;
 }
 
 #logo {
@@ -88,27 +83,12 @@ input { padding: 10px 20px; border-radius: 4px; }
     justify-content: center;
 }
 
-#logo #texto {
-    display: flex;
-    align-items: center;
-    font-size: 32px;
-    height: 40px;
-    font-family: 'Quantico', sans-serif;
-    color: #212B33;
-}
-
 nav {
-    background-color: #F3F4F5;
-    border-top: 0.5px solid #7FAAD0;
-    border-bottom: 0.5px solid #7FAAD0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   width: fit-content;
 }
 
 nav #menu {
     display: flex;
-    background-color: #F3F4F5;
     gap: 32px;
 }
 
@@ -128,7 +108,7 @@ main {color: #212B33;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 87.5vh;
 }
 
 main h1 {
@@ -142,6 +122,7 @@ main #calculadora {
     max-width: 1280px;
     margin: auto;
     padding: 32px;
+    border-radius: 4px;
 }
 
 main #calculadora h2{
@@ -177,6 +158,7 @@ main #container #resultado h2 {
 
 main #container #resultado p {
     text-align: center;
+    border-radius: 4px;
 }
 
 main #container #resultado #porcentagemFrequencia {
