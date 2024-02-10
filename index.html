@@ -37,7 +37,7 @@
 
                 <form action="" method="post" id="form">
                     <div>
-                        <select name="mes" id="mes" title="Selecione o mês de referência." required>
+                        <select name="mes" id="mes" title="Selecione o mês de referência." title="Selecione o mês de referência" required>
                             <option value="selecione">Selecione</option>
                             <option value="janeiro">Janeiro</option>
                             <option value="fevereiro">Fevereiro</option>
@@ -51,8 +51,8 @@
                             <option value="novembro">Novembro</option>
                             <option value="dezembro">Dezembro</option>
                         </select>
-                        <input type="number" name="diasLetivos" id="diasLetivos" placeholder="Dias" required>
-                        <input type="number" name="faltas" id="faltas" placeholder="Faltas" required>
+                        <input type="number" title="Informe a quantidade de dias letivos no mês selecionado" name="diasLetivos" id="diasLetivos" placeholder="Dias" required>
+                        <input type="number" title="Informe a quantidade de faltas do estudante" name="faltas" id="faltas" placeholder="Faltas" required>
                     </div>
 
                     <div>
