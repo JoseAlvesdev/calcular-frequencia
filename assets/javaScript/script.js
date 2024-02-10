@@ -19,12 +19,15 @@
             resultado.style.display = 'block';
 
             document.querySelector('#porcentagemFrequencia').innerText = `${frequencia.toFixed(1)}%` ;
-
             document.querySelector('#resultMes').innerText = `${mes.toUpperCase()} de 2024`;
-
             document.querySelector('#resultDiasLet').innerText = `${diasLetivos} letivos`;
-
             document.querySelector('#resultFaltas').innerText = `${faltas} faltas`;
+        }
+    });
+
+    form.addEventListener('reset', event => {
+        if (event) {
+            resultado.style.display = 'none'
         }
     });
 })();
