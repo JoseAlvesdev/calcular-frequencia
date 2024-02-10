@@ -24,7 +24,10 @@ h2 {
     margin: 18px auto;
 }
 
-input { padding: 10px 20px; border-radius: 4px; }
+input {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
 
 .btn {
     padding: 10px 20px;
@@ -92,26 +95,25 @@ nav {
 
 nav #menu {
     display: flex;
-    gap: 32px;
+    gap: 16px;
 }
 
 nav #menu a {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 0px 14px 0px;
     display: block;
     text-transform: capitalize;
     color: #212B33;
 }
 
 nav #menu a:hover {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 main {color: #212B33;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 87.5vh;
+    height: calc(100vh - 168px);
 }
 
 main h1 {
@@ -155,12 +157,12 @@ main #container #resultado {
     border-radius: 16px;
 }
 
-main #container #resultado h2 {
+main #container #resultado h2, h3 {
     text-align: center;
 }
 
 main #container #resultado p {
-    text-align: center;
+    text-align: left;
     border-radius: 4px;
 }
 
@@ -179,7 +181,10 @@ footer {
     text-align: center;
     color: white;
     height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: calc(100vh - 80px);
 }

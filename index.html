@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body style="position: relative;">
 
     <header id="header">
         <header class="header">
@@ -19,9 +19,10 @@
             <nav>
                 <ul id="menu">
                     <li><a href="#">home</a></li>
-                    <li><a href="#">serviços</a></li>
                     <li><a href="#">contato</a></li>
                     <li><a href="#">sobre</a></li>
+                    <li><a href="#">ajuda</a></li>
+                    <li><strong><a href="https://presenca.mec.gov.br/seb/" target="_blank" rel="external" style="padding-left: 2px;">sistema presença</a></strong></li>
                 </ul>
             </nav>
         </header>
@@ -64,10 +65,13 @@
 
             <section id="resultado">
                 <h2>Frequência Calculada</h2>
-                <p id="porcentagemFrequencia"></p>
-                <p id="resultMes"></p>
-                <p id="resultDiasLet"></p>
-                <p id="resultFaltas"></p>
+                <h3 id="porcentagemFrequencia"></h3>
+                <span style="width: 148px; display: block; text-align: left; margin: 0px auto;">
+                    <p title="Média conforme a média base do Sistema Presença">MÉDIA BASE: <strong>75,0%</strong></p>
+                    <p id="resultMes" style="text-transform: capitalize;"></p>
+                    <p id="resultDiasLet"></p>
+                    <p id="resultFaltas"></p>
+                </span>
             </section>
         </div>
     </main>
