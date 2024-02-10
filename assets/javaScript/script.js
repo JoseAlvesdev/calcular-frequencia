@@ -26,8 +26,6 @@
     });
 
     form.addEventListener('reset', event => {
-        if (event) {
-            resultado.style.display = 'none'
-        }
+        if (event) resultado.style.display = 'none';
     });
 })();
