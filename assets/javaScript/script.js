@@ -2,7 +2,9 @@
 
 (function () {
     const form = document.forms.namedItem('form');
-    const resultado = document.querySelector('#resultado');
+    const resultado = document.querySelector('.js-calculated-result');
+
+    console.log(form);
     
     form.addEventListener('submit', event => {
         event.preventDefault();
@@ -16,12 +18,12 @@
         const frequencia = (diasLetivos - faltas) * 100 / diasLetivos;
         
         if (event) {
-            resultado.style.display = 'block';
+            resultado.style.display = 'flex';
 
-            document.querySelector('#porcentagemFrequencia').innerText = `${frequencia.toFixed(1)}%` ;
-            document.querySelector('#resultMes').innerText = `${mes} de 2024`;
-            document.querySelector('#resultDiasLet').innerText = `${diasLetivos} letivos`;
-            document.querySelector('#resultFaltas').innerText = `${faltas} faltas`;
+            document.querySelector('.js-calculated-result__frequency').innerText = `${frequencia.toFixed(1)}%`;
+            document.querySelector('.js-information__month').innerText = `Mês: ${mes}`;
+            document.querySelector('.js-information__school-day').innerText = `Dias letivos: ${diasLetivos}`;
+            document.querySelector('.js-information__fouls').innerText = `Faltas: ${faltas}`;
         }
     });
 

@@ -1,86 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcular Frequência Online</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular Frequência | Escolar</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-</head>
+  <body>
+    <header class="c-header">
+      <div class="main-content-header u-horizontal-center">
+        <div class="c-logo">
+          <a class="c-logo__icone" href="#"></a>
+        </div>
 
-<body style="position: relative;">
-
-    <header id="header">
-        <header class="header">
-            <div id="logo">
-                <a href="#" id="icone"></a>
-            </div>
-
-            <nav>
-                <ul id="menu">
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">contato</a></li>
-                    <li><a href="#">sobre</a></li>
-                    <li><a href="#">ajuda</a></li>
-                    <li><strong><a href="https://presenca.mec.gov.br/seb/" target="_blank" rel="external" style="padding-left: 2px;">sistema presença</a></strong></li>
-                </ul>
-            </nav>
-        </header>
+        <nav class="c-navigatie">
+          <ul class="c-menu u-full-center">
+            <li class="c-menu__item">
+              <a class="c-menu__link c-menu__link--hover" href="./index.html"
+                >home</a
+              >
+            </li>
+            <li class="c-menu__item">
+              <a class="c-menu__link c-menu__link--hover" href="#">contato</a>
+            </li>
+            <li class="c-menu__item">
+              <a class="c-menu__link c-menu__link--hover" href="#">sobre</a>
+            </li>
+            <li class="c-menu__item">
+              <a class="c-menu__link c-menu__link--hover" href="#">ajuda</a>
+            </li>
+            <li class="c-menu__item">
+              <strong>
+                <a
+                  class="c-menu__link c-menu__link--hover"
+                  href="https://presenca.mec.gov.br/seb/"
+                  target="_blank"
+                  rel="external"
+                >
+                  sistema presença
+                </a>
+              </strong>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-        <div id="container">
-            <h1>Calculadora</h1>
+    <main class="c-container u-horizontal-center">
+      <section class="c-calculator">
+        <section class="c-calculate">
+          <h2 class="c-calculate__title">Calcular Frequência</h2>
 
-            <section id="calculadora">
+          <form class="c-form" name="form" action="" method="post" >
+            <select
+              class="c-select-month"
+              name="mes"
+              title="Selecione o mês de referência."
+              required
+            >
+              <option value="selecione">Selecione</option>
+              <option value="janeiro">Janeiro</option>
+              <option value="fevereiro">Fevereiro</option>
+              <option value="marco">Março</option>
+              <option value="abril">Abril</option>
+              <option value="maio">Maio</option>
+              <option value="junho">Junho</option>
+              <option value="agosto">Agosto</option>
+              <option value="setembro">Setembro</option>
+              <option value="outubro">Outubro</option>
+              <option value="novembro">Novembro</option>
+              <option value="dezembro">Dezembro</option>
+            </select>
 
-                <h2>Calcular Frequência</h2>
+            <input
+              class="c-form__input"
+              type="number"
+              title="Informe a quantidade de dias letivos no mês selecionado"
+              name="diasLetivos"
+              placeholder="Dias"
+              required
+            />
 
-                <form action="" method="post" id="form">
-                    <div>
-                        <select name="mes" id="mes" title="Selecione o mês de referência." title="Selecione o mês de referência" required>
-                            <option value="selecione">Selecione</option>
-                            <option value="janeiro">Janeiro</option>
-                            <option value="fevereiro">Fevereiro</option>
-                            <option value="marco">Março</option>
-                            <option value="abril">Abril</option>
-                            <option value="maio">Maio</option>
-                            <option value="junho">Junho</option>
-                            <option value="agosto">Agosto</option>
-                            <option value="setembro">Setembro</option>
-                            <option value="outubro">Outubro</option>
-                            <option value="novembro">Novembro</option>
-                            <option value="dezembro">Dezembro</option>
-                        </select>
-                        <input type="number" title="Informe a quantidade de dias letivos no mês selecionado" name="diasLetivos" id="diasLetivos" placeholder="Dias" required>
-                        <input type="number" title="Informe a quantidade de faltas do estudante" name="faltas" id="faltas" placeholder="Faltas" required>
-                    </div>
+            <input
+              class="c-form__input"
+              type="number"
+              title="Informe a quantidade de faltas do estudante"
+              name="faltas"
+              placeholder="Faltas"
+              required
+            />
 
-                    <div>
-                        <button type="reset" class="btn btn-secondary">Limpar</button>
-                        <button type="submit" class="btn btn-primary">Calcular</button>
-                    </div>
-                </form>
-            </section>
+            <button
+              type="reset"
+              class="c-form__button u-button-secondary u-button-secondary--hover"
+            >
+              Limpar
+            </button>
 
-            <section id="resultado">
-                <h2>Frequência Calculada</h2>
-                <h3 id="porcentagemFrequencia"></h3>
-                <span style="width: 148px; display: block; text-align: left; margin: 0px auto;">
-                    <p title="Média conforme a média base do Sistema Presença">MÉDIA BASE: <strong>75,0%</strong></p>
-                    <p id="resultMes" style="text-transform: capitalize;"></p>
-                    <p id="resultDiasLet"></p>
-                    <p id="resultFaltas"></p>
-                </span>
-            </section>
-        </div>
+            <button
+              type="submit"
+              class="c-form__button u-button-primary u-button-primary--hover"
+            >
+              Calcular
+            </button>
+          </form>
+        </section>
+
+        <section class="c-calculated-result js-calculated-result">
+          <h2 class="c-calculated-result__title">Frequência Obtida</h2>
+
+          <h3
+            class="c-calculated-result__frequency js-calculated-result__frequency"
+          >
+            45.7%
+          </h3>
+
+          <span class="c-information u-horizontal-center">
+            <p title="Média conforme a média base do Sistema Presença">
+              MÉDIA BASE: <strong>75,0%</strong>
+            </p>
+            <p class="c-information__month js-information__month">
+              Mês: Fevereiro
+            </p>
+            <p class="c-information__school-days js-information__school-day">
+              Dias letivos: 22
+            </p>
+            <p class="c-information__fouls js-information__fouls">Faltas: 8</p>
+          </span>
+        </section>
+      </section>
     </main>
 
-    <footer>
-        <p>© 2024 <a href="https://github.com/josehenriques10" style="font-family: inherit; color: white;" target="_blank"><strong>José Henrique</strong></a>. All Rights Reserved.</p>
+    <footer class="c-footer">
+      <p class="c-footer__paragraph">
+        © 2024
+        <a
+          class="c-footer__link"
+          href="https://github.com/josehenriques10"
+          target="_blank"
+          rel="external"
+        >
+          <strong> José Henrique </strong> </a
+        >. All Rights Reserved.
+      </p>
     </footer>
-    <script src="./assets/javaScript/script.js" defer></script>
-</body>
 
+    <script src="./assets/javaScript/script.js" defer></script>
+  </body>
 </html>

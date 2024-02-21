@@ -1,190 +1,163 @@
 @charset 'UTF-8';
+@import url("./utilities.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quantico:wght@400;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Quantico:wght@400;700&display=swap');
+:root {
+  --cor-light: #f3f4f5;
+  --cor-light-2: #cfd4d7;
+  --cor-dark: #2b2f33;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1 {
-    font-size: 24px;
-    background-color: #2B2F33;
-    padding: 8px 16px;
-    color: white;
-    border-radius: 16px 16px 0px 0px;
+body {
+  position: relative;
 }
 
-h2 {
-    font-size: 18px;
-    margin: 18px auto;
+.c-header {
+  background-color: var(--cor-light);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-input {
-    padding: 10px 20px;
-    border-radius: 4px;
+.main-content-header {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.btn {
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+.c-logo__icone {
+  background-image: url("../images/porcent-logo.svg");
+  background-size: contain;
+  height: 60px;
+  width: 60px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.btn-primary {
-    background-color: #2B2F33;
-    border: 2px solid #2B2F33;
-    color: white;
+.c-menu {
+  gap: 16px;
+  text-transform: capitalize;
 }
 
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid #2B2F33;
+.c-menu__link {
+  color: var(--cor-dark);
 }
 
-.btn-primary:hover {
-    background-color: transparent;
-    color: #212B33;
+.c-menu__link--hover:hover {
+  text-decoration: underline;
 }
 
-.btn-secondary:hover {
-    background-color: #2B2F33;
-    color: white;
+.c-container {
+  width: 1200px;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1200px;
-    max-width: 1200px;
-    height: 120px;
-    max-height: 88px;
-    margin: 0 auto;
+.c-calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  height: calc(100vh - 138px);
 }
 
-.header input {
-    width: 200px;
+.c-calculate {
+  width: 376px;
+  background-color: var(--cor-light);
+  border-radius: 0px 0px 16px 16px;
 }
 
-#logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+.c-calculate__title {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--cor-dark);
+  border-radius: 16px 16px 0px 0px;
+  padding: 8px;
 }
 
-#logo #icone {
-    background-image: url('../images/logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 88px;
-    height: 40px;
-    display: block;
-    align-items: center;
-    justify-content: center;
+.c-form {
+  padding: 32px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
-nav {
-   width: fit-content;
+.c-select-month {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
 }
 
-nav #menu {
-    display: flex;
-    gap: 16px;
+.c-form__input {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid;
+  text-align: center;
 }
 
-nav #menu a {
-    padding: 14px 0px 14px 0px;
-    display: block;
-    text-transform: capitalize;
-    color: #212B33;
+.c-form__button {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-nav #menu a:hover {
-    text-decoration: underline;
+.c-calculated-result {
+  height: 328px;
+  background-color: var(--cor-light-2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  color: var(--cor-dark);
+  text-align: center;
+  display: none;
+  flex-grow: 1;
 }
 
-main {color: #212B33;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 168px);
+.c-calculated-result__title {
+  text-align: center;
+  font-size: 1rem;
+  padding: 8px;
 }
 
-main h1 {
-    width: 1200px;
-    max-width: 1200px;
+.c-calculated-result__frequency {
+  font-size: 64px;
 }
 
-main #calculadora {
-    background-color: #F3F4F5;
-    width: 1200px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 32px;
-    border-radius: 0px 0px 16px 16px;
+.c-information {
+  width: 148px;
+  display: block;
+  text-align: left;
 }
 
-main #calculadora h2{
-    text-align: center;
+.c-footer {
+  color: white;
+  background-color: var(--cor-dark);
+  text-align: center;
+  padding: 8px;
+  top: calc(100vh - 38px);
+  position: fixed;
+  width: 100%;
 }
 
-main #calculadora div {
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-main select {
-    background-color: transparent;
-    border: 2px solid black;
-    border-radius: 4px;
-    padding: 9px 20px;
-}
-
-main #container #resultado {
-    background-color: #cfd4d7;
-    padding: 32px;
-    margin-top: 16px;
-    display: none;
-    border-radius: 16px;
-}
-
-main #container #resultado h2, h3 {
-    text-align: center;
-}
-
-main #container #resultado p {
-    text-align: left;
-    border-radius: 4px;
-}
-
-main #container #resultado #porcentagemFrequencia {
-    font-size: 64px;
-    font-weight: bold;
-    color: #2B2F33;
-}
-
-main #calculadora [type='number'] {
-    width: 133px;
-}
-
-footer {
-    background-color: #2B2F33;
-    text-align: center;
-    color: white;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: calc(100vh - 80px);
+.c-footer__link {
+  color: white;
 }
