@@ -53,14 +53,14 @@
     </header>
 
     <main class="c-container u-horizontal-center">
-      <section class="c-calculator">
+      <section class="c-calculator u-full-center">
         <section class="c-calculate">
           <h2 class="c-calculate__title">Calcular Frequência</h2>
 
           <form class="c-form" name="form" action="" method="post" >
             <select
               class="c-select-month"
-              name="mes"
+              name="month"
               title="Selecione o mês de referência."
               required
             >
@@ -82,7 +82,7 @@
               class="c-form__input"
               type="number"
               title="Informe a quantidade de dias letivos no mês selecionado"
-              name="diasLetivos"
+              name="schoolDays"
               placeholder="Dias"
               required
             />
@@ -91,7 +91,7 @@
               class="c-form__input"
               type="number"
               title="Informe a quantidade de faltas do estudante"
-              name="faltas"
+              name="fouls"
               placeholder="Faltas"
               required
             />
@@ -112,11 +112,11 @@
           </form>
         </section>
 
-        <section class="c-calculated-result js-calculated-result">
+        <section class="c-calculated-result js-default">
           <h2 class="c-calculated-result__title">Frequência Obtida</h2>
 
           <h3
-            class="c-calculated-result__frequency js-calculated-result__frequency"
+            class="c-calculated-result__frequency js-default"
           >
             45.7%
           </h3>
@@ -125,19 +125,19 @@
             <p title="Média conforme a média base do Sistema Presença">
               MÉDIA BASE: <strong>75,0%</strong>
             </p>
-            <p class="c-information__month js-information__month">
+            <p class="c-information__month js-default">
               Mês: Fevereiro
             </p>
-            <p class="c-information__school-days js-information__school-day">
+            <p class="c-information__school-days js-default">
               Dias letivos: 22
             </p>
-            <p class="c-information__fouls js-information__fouls">Faltas: 8</p>
+            <p class="c-information__fouls js-default">Faltas: 8</p>
           </span>
         </section>
       </section>
     </main>
 
-    <footer class="c-footer">
+    <footer class="c-footer u-full-center">
       <p class="c-footer__paragraph">
         © 2024
         <a

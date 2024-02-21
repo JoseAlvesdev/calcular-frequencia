@@ -62,17 +62,15 @@ body {
 }
 
 .c-calculator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row-reverse;
   gap: 24px;
-  height: calc(100vh - 138px);
+  height: calc(100vh - 188px);
 }
 
 .c-calculate {
   width: 376px;
   background-color: var(--cor-light);
-  border-radius: 0px 0px 16px 16px;
+  border-radius: 16px;
 }
 
 .c-calculate__title {
@@ -149,11 +147,12 @@ body {
 }
 
 .c-footer {
+  height: 88px;
   color: white;
   background-color: var(--cor-dark);
   text-align: center;
   padding: 8px;
-  top: calc(100vh - 38px);
+  top: calc(100vh - 88px);
   position: fixed;
   width: 100%;
 }
