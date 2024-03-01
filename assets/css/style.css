@@ -27,7 +27,7 @@ body {
   padding-bottom: 20px;
 }
 
-.main-content-header {
+.c-main-content-header {
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -37,8 +37,8 @@ body {
 .c-logo__icone {
   background-image: url("../images/porcent-logo.svg");
   background-size: contain;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   display: block;
   background-repeat: no-repeat;
   background-position: center center;
@@ -68,9 +68,10 @@ body {
 }
 
 .c-calculate {
-  width: 376px;
   background-color: var(--cor-light);
   border-radius: 16px;
+  max-width: 376px;
+  flex-grow: 0.5;
 }
 
 .c-calculate__title {
@@ -95,6 +96,7 @@ body {
   width: 100%;
   border-radius: 8px;
   text-align: center;
+  outline: 0;
 }
 
 .c-form__input {
@@ -104,9 +106,10 @@ body {
   border-radius: 8px;
   border: 1px solid;
   text-align: center;
+  outline: 0;
 }
 
-.c-form__button {
+.c-button {
   display: block;
   padding: 6px 12px;
   width: 100%;
@@ -114,6 +117,30 @@ body {
   border: 1px solid;
   font-weight: bold;
   cursor: pointer;
+}
+
+.c-button-primary {
+  background-color: var(--cor-dark);
+  color: white;
+  transition: 0.2s;
+}
+
+.c-button-secondary {
+  background-color: transparent;
+  color: var(--cor-dark);
+  transition: 0.2s;
+}
+
+.c-button-primary--hover:hover {
+  background-color: transparent;
+  color: var(--cor-dark);
+  transition: 0.2s;
+}
+
+.c-button-secondary--hover:hover {
+  background-color: var(--cor-dark);
+  color: white;
+  transition: 0.2s;
 }
 
 .c-calculated-result {
@@ -127,7 +154,7 @@ body {
   color: var(--cor-dark);
   text-align: center;
   display: none;
-  flex-grow: 1;
+  flex-grow: 3.5;
 }
 
 .c-calculated-result__title {

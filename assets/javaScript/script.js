@@ -8,7 +8,7 @@
         frontFrequency, 
         frontMonth,
         frontSchoolDays,
-        frontFouls 
+        frontFouls
     ] = document.querySelectorAll('.js-default');
     
     form.addEventListener('submit', event => {

@@ -7,27 +7,3 @@
 .u-horizontal-center {
   margin: 0px auto;
 }
-
-.u-button-primary {
-  background-color: var(--cor-dark);
-  color: white;
-  transition: 0.2s;
-}
-
-.u-button-secondary {
-  background-color: transparent;
-  color: var(--cor-dark);
-  transition: 0.2s;
-}
-
-.u-button-primary--hover:hover {
-  background-color: transparent;
-  color: var(--cor-dark);
-  transition: 0.2s;
-}
-
-.u-button-secondary--hover:hover {
-  background-color: var(--cor-dark);
-  color: white;
-  transition: 0.2s;
-}

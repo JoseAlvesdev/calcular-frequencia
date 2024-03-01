@@ -1,3 +1,6 @@
+<!-- 
+
+ -->
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -14,9 +17,9 @@
 
   <body>
     <header class="c-header">
-      <div class="main-content-header u-horizontal-center">
+      <div class="c-main-content-header u-horizontal-center">
         <div class="c-logo">
-          <a class="c-logo__icone" href="#"></a>
+          <a class="c-logo__icone" href="./index.html"></a>
         </div>
 
         <nav class="c-navigatie">
@@ -57,14 +60,14 @@
         <section class="c-calculate">
           <h2 class="c-calculate__title">Calcular Frequência</h2>
 
-          <form class="c-form" name="form" action="" method="post" >
+          <form class="c-form" name="form" action="" method="post">
             <select
               class="c-select-month"
               name="month"
               title="Selecione o mês de referência."
               required
             >
-              <option value="selecione">Selecione</option>
+              <option value="selecione um mês">Selecione um mês</option>
               <option value="janeiro">Janeiro</option>
               <option value="fevereiro">Fevereiro</option>
               <option value="marco">Março</option>
@@ -83,7 +86,7 @@
               type="number"
               title="Informe a quantidade de dias letivos no mês selecionado"
               name="schoolDays"
-              placeholder="Dias"
+              placeholder="Dias letivos do mês"
               required
             />
 
@@ -92,20 +95,20 @@
               type="number"
               title="Informe a quantidade de faltas do estudante"
               name="fouls"
-              placeholder="Faltas"
+              placeholder="Faltas do estudante"
               required
             />
 
             <button
               type="reset"
-              class="c-form__button u-button-secondary u-button-secondary--hover"
+              class="c-button c-button-secondary c-button-secondary--hover"
             >
               Limpar
             </button>
 
             <button
               type="submit"
-              class="c-form__button u-button-primary u-button-primary--hover"
+              class="c-button c-button-primary c-button-primary--hover"
             >
               Calcular
             </button>
@@ -115,19 +118,13 @@
         <section class="c-calculated-result js-default">
           <h2 class="c-calculated-result__title">Frequência Obtida</h2>
 
-          <h3
-            class="c-calculated-result__frequency js-default"
-          >
-            45.7%
-          </h3>
+          <h3 class="c-calculated-result__frequency js-default">45.7%</h3>
 
           <span class="c-information u-horizontal-center">
             <p title="Média conforme a média base do Sistema Presença">
               MÉDIA BASE: <strong>75,0%</strong>
             </p>
-            <p class="c-information__month js-default">
-              Mês: Fevereiro
-            </p>
+            <p class="c-information__month js-default">Mês: Fevereiro</p>
             <p class="c-information__school-days js-default">
               Dias letivos: 22
             </p>
